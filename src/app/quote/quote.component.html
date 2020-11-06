@@ -6,16 +6,18 @@
   <div class="jumbotron">
     <div class="row">
         <div class="col-md-6">
-          <li *ngFor='let quote of quotes'>
-            <p>{{quote.state}}</p>
-            <p>{{quote.author}}</p>
-            <p>{{quote.date}}</p>
-            <p>{{quote.user}}</p>
-          </li>
-        </div>
-        <div class="col-md-6">
-            <app-quote-form></app-quote-form>
+          <div *ngFor='let quote of quotes;let i = index'>
+            <br>
+            <br>
+              <div class="card">
+                  <p id={{i}}>quote: "{{quote.quote}}" <br> by: {{quote.author}} <br> submitted
+                      by:{{quote.submittedBy}} <br> since :{{quote.since|dateCount}} days ago</p>
+                    </div>
         </div>
       </div>
+        <div class="col-md-6">
+          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+      
   </div>
 </div>

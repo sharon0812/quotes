@@ -8,13 +8,18 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote( 0,'Shizzel shaz',  'Push yourself, because no one else is going to do it for you', 'Sharon',new Date()),
-    new Quote( 1,'Abraham Lincon', 'Whatever i am or ever hope to be i owe it to my mother ', 'Jane',new Date()),
-    new Quote( 2,'Martin Luther', 'Work hard in silence , let your succes shout', 'Gianna',new Date()),
-    new Quote( 3,'Nadine Gold', 'The harder you work for something ,the greater you will fill when you achieve it', 'Favour',new Date()),
+    new Quote( 'Push yourself, because no one else is going to do it for you',  'Sharon Anyango', 'Mary', new Date(2015,12,5)),
+    new Quote('Whatever i am or ever hope to be i owe it to my mother', 'Abraham Lincon ', 'Jane', new Date()),
+    new Quote('Work hard in silence , let your succes shout', 'Jack Ma', 'Gianna', new Date()),
+    new Quote('The harder you work for something ,the greater you will fill when you achieve it', 'Keylee Vee', 'Favour',new Date()),
 
-  ];  
-  
+  ];   
+  addNewQuote (quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completedate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
   
   constructor() { }
 
