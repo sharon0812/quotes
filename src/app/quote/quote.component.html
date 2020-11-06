@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="shaz">
+    <h1>Join our quotes</h1>
+
+  </div>
+  <div class="jumbotron">
+    <div class="row">
+        <div class="col-md-6">
+          <li *ngFor='let quote of quotes'>
+            <p>{{quote.state}}</p>
+            <p>{{quote.author}}</p>
+            <p>{{quote.date}}</p>
+            <p>{{quote.user}}</p>
+          </li>
+        </div>
+        <div class="col-md-6">
+            <app-quote-form></app-quote-form>
+        </div>
+      </div>
+  </div>
+</div>
