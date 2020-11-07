@@ -5,39 +5,40 @@
   </div>
   <div class="jumbotron">
     <div class="row">
-        <div class="col-md-6">
-          <div *ngFor='let quote of quotes;let i = index'>
-            <br>
-            
-            
-              <div class="card">
-                  <p id={{i}}>quote: "{{quote.quote}}" <br> by: {{quote.author}} <br> submitted
-                      by:{{quote.submittedBy}} <br> since :{{quote.since|dateCount}} days ago</p>
-                    </div>
-                    <br>
-                    
-                    <div class="text-center container">
-                      <button style="margin-left:10px;" (click)='deleteQuote($event,i)' class="btn btn-outline-danger">Delete</button>
-                      <button style="margin-left:10px;" class="btn btn-outline-success" (click)='upVotes(i)'>LIKE {{quote.upVote}} <i
-                              class="fa fa-thumbs-up" ></i></button>
-                      <button style="margin-left:20px;" class="btn btn-outline-warning" (click)='downVotes(i)'>DISLIKE{{quote.downVote}} <i
-                              class="fa fa-thumbs-down" ></i></button>
-                  
-                  
-                  </div>
-                    <div *ngIf='quote.showDescription'>
-                      <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
-                  </div>
-                  
+      <div class="col-md-6">
+        <div *ngFor='let quote of quotes;let i = index'>
+          <br>
+
+
+          <div class="card">
+            <p id={{i}}>quote: "{{quote.quote}}" <br> by: {{quote.author}} <br> submitted
+              by:{{quote.submittedBy}} <br> since :{{quote.since|dateCount}} days ago</p>
+          </div>
+          <br>
+
+          <div class="text-center container">
+            <button style="margin-left:10px;" (click)='deleteQuote($event,i)'
+              class="btn btn-outline-danger">Delete</button>
+            <button style="margin-left:10px;" class="btn btn-outline-success" (click)='upVotes(i)'>LIKE {{quote.upVote}}
+              <i class="fa fa-thumbs-up"></i></button>
+            <button style="margin-left:20px;" class="btn btn-outline-warning"
+              (click)='downVotes(i)'>DISLIKE{{quote.downVote}} <i class="fa fa-thumbs-down"></i></button>
+
+
+          </div>
+          <div *ngIf='quote.showDescription'>
+            <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+          </div>
+
 
         </div>
       </div>
-        <div class="col-md-6">
-          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-<br>
-<br>
-<br>
-          <div class="favourite">
+      <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        <br>
+        <br>
+        <br>
+        <div class="favourite">
           <button (click)='highVotes()' class="btn btn-dark">Favourite</button>
           <br>
           <br>
@@ -47,8 +48,8 @@
             </div>
           </div>
         </div>
-        </div>
-        
+      </div>
 
+
+    </div>
   </div>
-</div>
