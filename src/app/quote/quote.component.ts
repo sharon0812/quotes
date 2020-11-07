@@ -30,10 +30,18 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+  upVotes(index){
+    this.quotes[index].upVote++
+  }
+  downVotes(index){
+    this.quotes[index].downVote++
+  }  
+  
+  
   completeDate(complete: boolean){
     
   }
-  
+   
   constructor() { }
 
   ngOnInit(): void {
