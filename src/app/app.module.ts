@@ -9,6 +9,7 @@ import { QouteDetailComponent } from './qoute-detail/qoute-detail.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { DateCountPipe } from './date-count.pipe';
+import { FavourlightDirective } from './favourlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DateCountPipe } from './date-count.pipe';
     QuoteComponent,
     QouteDetailComponent,
     QuoteFormComponent,
-    DateCountPipe
+    DateCountPipe,
+    FavourlightDirective
   ],
   imports: [
     BrowserModule,
