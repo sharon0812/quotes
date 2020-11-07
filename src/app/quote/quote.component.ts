@@ -10,7 +10,7 @@ export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote( 'Push yourself, because no one else is going to do it for you',  'Sharon Anyango', 'Mary', new Date(2020,7,11)),
     new Quote('Whatever i am or ever hope to be i owe it to my mother', 'Abraham Lincon ', 'Jane', new Date(2020,6,9)),
-    new Quote('Work hard in silence , let your succes shout', 'Jack Ma', 'Gianna', new Date(2019,3,7)),
+    new Quote('Work hard in silence , let your success shout', 'Jack Ma', 'Gianna', new Date(2019,3,7)),
     new Quote('The harder you work for something ,the greater you will fill when you achieve it', 'Keylee Vee', 'Favour',new Date(2020,12,10)),
 
   ];   
