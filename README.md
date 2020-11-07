@@ -36,5 +36,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Contact
 * anyangosharon26@gmail.com
 
-## Lincess
+## Lincese
  * Copyright (C) 2020 **(QUOTES)**
