@@ -1,4 +1,14 @@
-# Quotes
+## Quotes
+## Author
+ * Sharon Anyanggo.
+ ## Description
+ * This  project is to create an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational. 
+ ## BDD
+  * like the quotes in the page.
+  * Add your quote in the form add click on the add quote button.
+  * Your quote will appear below the above quotes.
+  * Clike the favourite button and see the most voted quote.
+  
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
