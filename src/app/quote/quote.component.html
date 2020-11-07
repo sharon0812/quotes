@@ -8,13 +8,14 @@
         <div class="col-md-6">
           <div *ngFor='let quote of quotes;let i = index'>
             <br>
-            <br>
+            
+            
               <div class="card">
                   <p id={{i}}>quote: "{{quote.quote}}" <br> by: {{quote.author}} <br> submitted
                       by:{{quote.submittedBy}} <br> since :{{quote.since|dateCount}} days ago</p>
                     </div>
                     <br>
-                    <br>
+                    
                     <div class="text-center container">
                       <button style="margin-left:10px;" (click)='deleteQuote($event,i)' class="btn btn-outline-danger">Delete</button>
                       <button style="margin-left:10px;" class="btn btn-outline-success" (click)='upVotes(i)'>LIKE {{quote.upVote}} <i
