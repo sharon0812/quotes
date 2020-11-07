@@ -33,7 +33,21 @@
       </div>
         <div class="col-md-6">
           <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+<br>
+<br>
+<br>
+          <div class="favourite">
+          <button (click)='highVotes()' class="btn btn-dark">Favourite</button>
+          <br>
+          <br>
+          <div class="card" appHighlight>
+            <div *ngIf='highVotes'>
+              <p id={{i}}>{{quote}} <br>{{author}} <br>{{submittedBy}} <br>{{since}}</p>
+            </div>
+          </div>
         </div>
-      
+        </div>
+        
+
   </div>
 </div>
