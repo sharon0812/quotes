@@ -41,6 +41,26 @@ export class QuoteComponent implements OnInit {
   completeDate(complete: boolean){
     
   }
+  high:number;
+  author:string;
+  submittedBy:String;
+  quote:String;
+  low:number;
+  day:any;
+
+  highVotes() {
+    this.high = 0;
+  for (let i = 0;i<this.quotes.length;i++){
+    if(this.quotes[i].upVote>this.high){
+      this.high = this.quotes[i].upVote;
+      this.author = this.quotes[i].author;
+      this.submittedBy = this.quotes[i].submittedBy;
+      this.quote = this.quotes[i].quote;
+      this.low = this.quotes[i].downVote;
+      this.day = this.quotes[i].since;
+    }
+  }
+  }
    
   constructor() { }
 
